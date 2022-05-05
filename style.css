@@ -1,0 +1,22 @@
+:root{
+    /* Por padrão na maioria dos navegadores o tamanho da fonte é 16px, uma estratégia de trabalhar com as fontes do aplicação de maneira mais flexivel 
+    é colocar a font-size na raiz(:root) = 62,5 deixando padrão para todo arquivo 10px torna facilitando a manipulação de fontes de outros tamanhos para*/
+    font-size: 62,5%;
+    /*Variaveis do CSS*/
+    --primary-color: #00856f;
+}
+body{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.6rem;
+} 
+h4{
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+h1{
+    font-size: 3.4rem;
+}
+p{
+    font-size: 1.8rem;
+}
+
