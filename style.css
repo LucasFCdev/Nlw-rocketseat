@@ -13,6 +13,7 @@
 
     --brand-beige: #FFFAF1;
     --brand-light: #DCE9E2;
+    --brand-green-light: #DCE9E2;
 
 }
 body{
@@ -102,4 +103,22 @@ button{
     color: var(--primary-color);
     font-size: 1.6rem;
     line-height: 150%;
+}
+header img{
+    width: 26.4rem;
+    display: block;
+    margin-inline: auto;
+    object-position: 0 2rem;
+}
+header::before{
+    content: "";
+    width: 100vw;
+    height: 108rem;
+
+    display: block;
+    background-color: var(--brand-green-light);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
