@@ -1,3 +1,4 @@
+/*------ Geral --------*/
 *{
     margin: 0;
     box-sizing: border-box;
@@ -14,6 +15,7 @@
     --brand-beige: #FFFAF1;
     --brand-light: #DCE9E2;
     --brand-green-light: #DCE9E2;
+    --nav-height:7.2rem;
 
 }
 body{
@@ -22,27 +24,46 @@ body{
 
     text-align: center;
 } 
+.wrapper{
+    width: 37.5rem;
+    margin-left: auto;
+    margin-right: auto;padding-inline: 2.4rem;
+
+}
+/*--------------- Header ------------------*/
+header::before{
+    content: "";
+    width: 100vw;
+    height: calc(108rem + var(--nav-height));
+
+    display: block;
+    background-color: var(--brand-green-light);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
 header{
     width: 37.5rem;
     margin-left: auto;
     margin-right: auto;
 
-    margin-top: 4.1rem;
+    margin-top: calc(4.1rem + var(--nav-height));
 }
-h4{
+header h4{
     font-size: 1.4rem;
     color: var(--primary-color);
 
     margin-bottom: 1.6rem;
 }
-h1{
+header h1{
     font-size: 3.4rem;
     color: var(--headline);
     line-height: 130%;
 
     margin-bottom: 2.4rem;
 }
-p{
+header p{
     font-size: 1.8rem;
     line-height: 150%;
     font-weight: 400;
@@ -51,7 +72,7 @@ p{
     margin-bottom: 3.2rem;
 
 }
-button{
+header button{
     background-color: var(--primary-color);
 
     margin-bottom: 6.0rem;
@@ -74,6 +95,12 @@ button{
     margin-right: auto;
 
     border: none;
+}
+header img{
+    width: 26.4rem;
+    display: block;
+    margin-inline: auto;
+    object-position: 0 2rem;
 }
 .stats{
     background-color: var(--brand-beige) ;
@@ -104,21 +131,18 @@ button{
     font-size: 1.6rem;
     line-height: 150%;
 }
-header img{
-    width: 26.4rem;
-    display: block;
-    margin-inline: auto;
-    object-position: 0 2rem;
-}
-header::before{
-    content: "";
-    width: 100vw;
-    height: 108rem;
+/* ------------- Nav---------------*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    display: block;
-    background-color: var(--brand-green-light);
-    position: absolute;
+    /*padding: 1.6rem 2.4rem;*/
+    height:var(--nav-height) ;
+
+    position: fixed;
     top: 0;
-    left: 0;
-    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    
 }
