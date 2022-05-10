@@ -146,3 +146,12 @@ nav{
     transform: translateX(-50%);
     
 }
+nav.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav.scroll{
+    background-color: var(--primary-color);
+    width: 100vw;
+}
