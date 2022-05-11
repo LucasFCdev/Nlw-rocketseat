@@ -1,6 +1,7 @@
 /*------ Geral --------*/
 *{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 :root{
@@ -18,6 +19,11 @@
     --nav-height:7.2rem;
 
 }
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
 body{
     font-family: 'DM Sans', sans-serif;
     font-size: 1.6rem;
@@ -30,10 +36,13 @@ body{
     margin-right: auto;padding-inline: 2.4rem;
 
 }
+ul{
+    list-style: none;
+}
 /*--------------- Header ------------------*/
 header::before{
     content: "";
-    width: 100vw;
+    width: 100%;
     height: calc(108rem + var(--nav-height));
 
     display: block;
@@ -159,4 +168,13 @@ nav.scroll svg:nth-child(1) path{
 }
 nav.scroll svg:nth-child(2) path{
     stroke: white;
+}
+/* ------------- Nav menu expend ---------------*/
+body.menu-expanded .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--primary-color);
+
+    
 }
