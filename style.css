@@ -33,8 +33,7 @@ body{
 } 
 .wrapper{
     width: 37.5rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     padding-inline: 2.4rem;
 
 }
@@ -138,6 +137,12 @@ header img{
     font-size: 1.6rem;
     line-height: 150%;
 }
+
+nav button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 /* ------------- Nav---------------*/
 nav{
     display: flex;
@@ -166,12 +171,15 @@ nav.scroll{
 nav.scroll svg:nth-child(1) path{
     fill: white;
 }
-nav.scroll svg:nth-child(2) path{
+nav.scroll button path{
     stroke: white;
 }
 /* ------------- Nav menu expend ---------------*/
 body.menu-expanded{
     overflow: hidden;
+}
+body.menu-expandad > :not(nav){
+    display: none;
 }
 .menu,
 .close-menu
