@@ -192,6 +192,8 @@ body.menu-expanded .menu{
 
     width: 100vw;
     height: 100vh;
+
+    padding-top: var(--nav-height);
     
 }
 body.menu-expanded nav{
@@ -230,12 +232,21 @@ body.menu-expanded nav{
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 3.1rem;    
+
+    margin-top: 6rem;
 }
 .menu ul li a {
     color: white;
     text-decoration: none;
 }
-body.menu-expanded .logo{
+body.menu-expanded .logo,
+body.menu-expanded button.close-menu{
     position: relative;
     z-index: 10;
+}
+body.menu-expanded .logo path{
+    fill: white;
+}
+body.menu-expanded button path{
+    stroke: white;
 }
